@@ -9,8 +9,6 @@ mongoose.connect('mongodb://localhost/urltask', {
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
-var util= require('util');
-var encoder = new util.TextEncoder('utf-8');
 app.get('/', async (req, res) => {
   const shortUrls = await ShortUrl.find()
   res.render('index', { shortUrls: shortUrls })
