@@ -1,0 +1,5 @@
+to start this : simply type npm start or nodemon
+
+and go to browser type http://localhost:5100/ to get UI page
+
+if this "ReferenceError: TextEncoder is not defined" error comes simply go to node_modules->whatwg-url->dist->encoding.js and "const { TextEncoder, TextDecoder } = require("util");" paste this on the top
